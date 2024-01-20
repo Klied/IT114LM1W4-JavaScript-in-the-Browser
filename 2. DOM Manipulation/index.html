@@ -31,9 +31,13 @@
 
         // Todo 2.1 Select the unordered list with the id "subjects-taken"
         // Resource: https://dev.to/alternate_robot/dom-selectors-in-javascript-344i
+        let subjectsTakenList = document.getElementById('subjects-taken');
 
         // Checkpoint 2.1 What are the other ways to select elements in the DOM?
-        // Answer:
+        // Answer: it uses  let foundElement = document.getElementById('first-header')
+                    // and foundElement.style.color = 'blue', and if an element does not exist in the HTML file and is created using JavaScript, 
+                    let createdWithJsElement = document.createElement('p')
+                    createdWithJsElement.id = 'js-element'
 
         // Todo 2.2 Set the text of the second list item to "IT102 - Python Fundamentals"
         // Resource: https://www.javascripttutorial.net/javascript-dom/javascript-get-child-element/
