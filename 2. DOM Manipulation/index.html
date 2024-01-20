@@ -59,18 +59,35 @@
         // Todo 2.3 Create another list item, and add it as a child of the unordered list
         //          Set the text of the list item to your favorite subject
         // Resource: https://www.javascripttutorial.net/dom/manipulating/create-a-dom-element/
+                // Create a new list item
+var newListItem = document.createElement('li');
+newListItem.textContent = 'Art History'; // Set the text of the list item to your favorite subject
+
+// Add the new list item as a child of the unordered list
+var unorderedList = document.getElementById('your-unordered-list-id'); // Replace 'your-unordered-list-id' with the actual id of your unordered list
+unorderedList.appendChild(newListItem);
 
         // Todo 2.4 Set the id attribute of the list item you created to "favorite-subject".
         //          Set the class of the list item to "newly-created"
+        newListItem.id = 'favorite-subject'; // Set the id attribute of the list item to "favorite-subject"
+newListItem.classList.add('newly-created'); // Set the class of the list item to "newly-created"
 
         // Todo 2.5 Delete the third list item in the unordered list
+        var unorderedList = document.getElementById('your-unordered-list-id'); // Replace 'your-unordered-list-id' with the actual id of your unordered list
+var thirdListItem = unorderedList.getElementsByTagName('li')[2]; // Select the third list item (index 2)
+unorderedList.removeChild(thirdListItem); // Delete the third list item
 
         // Checkpoint 2.3 What is the difference between node and element?
-        // Answer:
+        // Answer: In the context of the DOM, a node is a generic term that can refer to any type of object in the DOM hierarchy, including elements, text nodes, comments, etc. On the other hand, an element specifically refers to an HTML element node, such as <div>, <p>, <ul>, etc. Therefore, all elements are nodes, but not all nodes are elements.
+
 
         // Bonus Todo 2.6 Select the parent of the unordered list.
+        var parentOfUnorderedList = unorderedList.parentNode; // Select the parent of the unordered list
 
         // Bonus Todo 2.7 Select the previous sibling of the list item you previously created
+        var previousSibling = newListItem.previousElementSibling; // Select the previous sibling of the list item
+
+    
     </script>
 </body>
 
