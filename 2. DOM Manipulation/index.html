@@ -36,14 +36,14 @@
         // Checkpoint 2.1 What are the other ways to select elements in the DOM?
         // Answer: it uses  let foundElement = document.getElementById('first-header')
                     // and foundElement.style.color = 'blue', and if an element does not exist in the HTML file and is created using JavaScript, 
-                    let createdWithJsElement = document.createElement('p')
-                    createdWithJsElement.id = 'js-element'
+                    let createdWithJsElement = document.createElement('p');
+                    createdWithJsElement.id = 'js-element';
 
         // Todo 2.2 Set the text of the second list item to "IT102 - Python Fundamentals"
         // Resource: https://www.javascripttutorial.net/javascript-dom/javascript-get-child-element/
-        let subjectsTakenList = document.getElementById('subjects-taken');
-            if (subjectsTakenList && subjectsTakenList.children.length > 1) {
-            subjectsTakenList.children[1].textContent = "IT102 - Python Fundamentals";
+        let subjectsTakenList3 = document.getElementById('subjects-taken');
+            if (subjectsTakenList3 && subjectsTakenList3.children.length > 1) {
+            subjectsTakenList3.children[1].textContent = "IT102 - Python Fundamentals";
         }
 
         // Checkpoint 3.2 What is the difference between innerText, textContent, and innerHTML. When should you use one over the other?
@@ -64,17 +64,17 @@ var newListItem = document.createElement('li');
 newListItem.textContent = 'Art History'; // Set the text of the list item to your favorite subject
 
 // Add the new list item as a child of the unordered list
-var unorderedList = document.getElementById('your-unordered-list-id'); // Replace 'your-unordered-list-id' with the actual id of your unordered list
+var unorderedList = document.getElementById('subjects-taken'); // Replace 'your-unordered-list-id' with the actual id of your unordered list
 unorderedList.appendChild(newListItem);
 
         // Todo 2.4 Set the id attribute of the list item you created to "favorite-subject".
         //          Set the class of the list item to "newly-created"
-        newListItem.id = 'Microcontroller Platform Programming'; // Set the id attribute of the list item to "favorite-subject"
+        newListItem.setAttribute = 'Microcontroller Platform Programming'; // Set the id attribute of the list item to "favorite-subject"
 newListItem.classList.add('newly-created'); // Set the class of the list item to "newly-created"
 
         // Todo 2.5 Delete the third list item in the unordered list
         var unorderedList = document.getElementById('IT128P'); // Replace 'your-unordered-list-id' with the actual id of your unordered list
-var thirdListItem = unorderedList.getElementsByTagName('li')[2]; // Select the third list item (index 2)
+var thirdListItem = unorderedList.getElementsByTagName('index 2')[2]; // Select the third list item (index 2)
 unorderedList.removeChild(thirdListItem); // Delete the third list item
 
         // Checkpoint 2.3 What is the difference between node and element?
