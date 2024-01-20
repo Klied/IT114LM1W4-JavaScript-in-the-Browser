@@ -41,9 +41,20 @@
 
         // Todo 2.2 Set the text of the second list item to "IT102 - Python Fundamentals"
         // Resource: https://www.javascripttutorial.net/javascript-dom/javascript-get-child-element/
+        let subjectsTakenList = document.getElementById('subjects-taken');
+            if (subjectsTakenList && subjectsTakenList.children.length > 1) {
+            subjectsTakenList.children[1].textContent = "IT102 - Python Fundamentals";
+        }
 
         // Checkpoint 3.2 What is the difference between innerText, textContent, and innerHTML. When should you use one over the other?
-        // Answer:
+
+        // Answer: innerText should be used when you need to retrieve or set the visible text content of an element, excluding hidden or styled elements. It is aware of the rendered appearance of text, including styling and line breaks.
+        // textContent is suitable for retrieving or setting the full text content of an element, including all elements and their content, regardless of styling or visibility. It is aware of formatting like spacing and line breaks and returns those as well.  
+        //innerHTML is used when you need to manipulate the HTML content within an element, including adding or removing elements and their attributes.
+
+
+
+//If you have further questions or need additional information, feel free to ask!
 
         // Todo 2.3 Create another list item, and add it as a child of the unordered list
         //          Set the text of the list item to your favorite subject
