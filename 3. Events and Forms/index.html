@@ -54,9 +54,18 @@
 
 
 <body>
-    <button>grandparent</button>
+    <div id="container">
+        <button>grandparent</button>
+      </div>
+
+      <div id="container">
         <button>parent</button>
+      </div>
+
+      <div id="container">
         <button>child</button>
+      </div>
+      <pre id="output"></pre>
 
     <form>
         <input type ="text" name = "firstName" id="firstname">
@@ -116,16 +125,24 @@ btn.addEventListener("click", () => {
         myElement.addEventListener("click", child);
         const btn1 = document.querySelector("child");
         btn1.addEventListener("click", () => {
-  console.log("child");
+            output.textContent = `grandparent`;;
 });
         const btn2 = document.querySelector("parent");
         btn2.addEventListener("click", () => {
-  cconsole.log("parent");
+            output.textContent = `grandparent`;;
 });
         const btn3 = document.querySelector("grandparent");
         btn3.addEventListener("click", () => {
-    console.log("grandparent");
+            output.textContent = `grandparent`;
 });
+
+
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector("#container");
 
         // Checkpoint 3.2 What is event bubbling? How was it shown in Todo 3.5?
         // Answer: Event bubbling and event capturing are two different ways of event propagation in the Document Object Model (DOM) in JavaScript. In event capturing, the outermost element's event handler is executed first, followed by the inner elements' event handlers. Conversely, in event bubbling, the innermost element's event handler is executed first, followed by the outer elements' event handlers .
